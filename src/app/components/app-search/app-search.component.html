@@ -1,0 +1,16 @@
+<div ngClass="container h-100">
+    <div ngClass="row h-100">
+        <div ngClass="col-md-12  d-flex justify-content-center align-items-center" style="flex-direction: column;">
+
+            <h1 ngClass="search--h1">Podaj imię</h1>
+            <input ngClass="search--input form-control" id="search--input-id" #name type="text" (keyup.enter)="onClick(name.value)"/>
+            <button *ngIf="clicked === false" ngClass="btn btn-lg search--button" (click)="onClick(name.value)">Wyślij zapytanie</button>
+
+            <button *ngIf="clicked" class="btn btn-primary" type="button" disabled>
+                <span ngClass="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                <span ngClass="sr-only">Loading...</span>
+            </button>
+            
+        </div>  
+    </div>
+</div>

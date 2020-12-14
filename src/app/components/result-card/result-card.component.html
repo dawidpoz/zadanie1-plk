@@ -1,0 +1,9 @@
+
+<!-- Jeśli mężczyzna -->
+<app-result-card-item *ngIf="isMale && notFound === false" [id]="formatName(id)" [count]="count" [probability]="probability" [gender]="'Mężczyzna'" [odmiana]="'chciałbyś'" [class]="'result--card--male'" [image]="'/../assets/4763611821548234958.svg'"></app-result-card-item>
+
+<!-- Jeśli kobieta -->
+<app-result-card-item *ngIf="isMale === false && notFound === false" [id]="formatName(id)" [count]="count" [probability]="probability" [gender]="'Kobieta'" [odmiana]="'chciałabyś'" [class]="'result--card--female'" [image]="'/../assets/17277648501548234969.svg'"></app-result-card-item>
+
+<!-- Jeśli API nie znajdzie płci -->
+<app-result-card-item *ngIf="notFound" [id]="formatName(id)" [odmiana]="'chciałbyś/chciałabyś'" [class]="'result--card--other'" [count]="count" [probability]="probability" [gender]="'?'" [image]="'/../assets/17521312191535958156.svg'"></app-result-card-item>

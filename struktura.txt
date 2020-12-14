@@ -1,0 +1,30 @@
+/
+
+	<app-search>
+		input
+		button
+	</app-search>
+
+
+/:id
+	
+	<app-result>
+
+		<app-button-back></app-button-back> -- fixed
+
+		<div container>
+
+			// Jeśli request do api się uda
+			<app-result-card>
+				<app-result-card-item></app-result-card-item>
+			</app-result-card>
+
+			// Jeśli request do api się nie uda lub jeszcze trwa
+			<ng-template #notLoaded></ng-template>
+
+		</div>
+
+	</app-result>
+
+**
+	<app-error></app-error>

@@ -1,0 +1,29 @@
+<div ngClass="result--card--content">
+    <img src="{{image}}" ngClass="result--card--img">
+    <div ngClass="result--card--text">
+        <span>
+            <span ngClass="result--card--text-bold" title="{{id}}">{{id}}</span> 
+            czy {{odmiana}} dowiedzieć się więcej o naszych usługach?
+        </span>
+    </div>
+    <div ngClass="container" style="margin: 0; padding: 0;">
+        <div ngClass="row">
+
+            <div ngClass="col-md-4 result--card--stats {{class}}">
+                <span>Wystąpień</span>
+                <span>{{count}}</span>
+            </div>
+
+            <div ngClass="col-md-4 result--card--stats {{class}}">
+                <span>%</span>
+                <span>{{(probability*100).toFixed(2)}}</span>
+            </div>
+
+            <div ngClass="col-md-4 result--card--stats {{class}}">
+                <span>Płeć</span>
+                <span>{{gender}}</span>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,76 @@
+.result--card--text-bold{
+    font-weight: bold;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.result--card--img{
+    padding: 40px 40px 0px 40px; 
+    max-width: 70%;
+}
+
+.result--card--text{
+    height: 40%;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fefefe;
+    box-shadow: inset 0px 11px 8px -10px #555,
+    inset 0px -11px 8px -10px #555;;
+    /* border-bottom: 1px solid #aaa; */
+}
+
+.result--card--stats{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    color: #fff;
+    border-right: 1px solid #eee;
+}
+
+.result--card--stats:last-child{
+    border-right: 0;
+}
+
+.result--card--stats:first-child{
+    border-left: 0;
+}
+
+.result--card--stats span:first-child{
+    /* font-weight: 200; */
+    font-size: 12px;
+}
+
+.result--card--stats span:nth-child(2){
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.result--card--male{
+    background-color: #0066ff;
+}
+
+.result--card--female{
+    background-color: #E75480;
+}
+
+.result--card--other{
+    background-color: #aaa;
+}
+
+@media (max-width: 768px){
+    .result--card--stats{
+        border: 0;
+    }
+
+    .result--card--stats:first-child{
+        border-bottom: 1px solid #eee;
+    }
+
+    .result--card--stats:nth-child(2){
+        border-bottom: 1px solid #eee;
+    }
+}

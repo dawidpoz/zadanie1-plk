@@ -1,0 +1,26 @@
+<app-button-back (click)="back()"></app-button-back>
+
+<div ngClass="container h-100">
+    <div ngClass="row h-100">
+        <div ngClass="col-md-12  d-flex justify-content-center align-items-center" style="flex-direction: column;">
+
+        <!-- isLoaded true block -> Udany request z rest api -->
+        <div *ngIf="isLoaded; else notLoaded" ngClass="result--card">
+
+            <!-- Generowanie karty na postawie wartości z rodzica -->
+            <app-result-card [isMale]="isMale" [notFound]="notFound" [id]="id" [count]="count" [probability]="probability"></app-result-card>
+
+        </div>
+
+        <!-- isLoaded false block -> Nieudany request z rest api -->
+        <ng-template #notLoaded>
+            <div ngClass="result--card justify-content-center align-items-center d-flex">
+                <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+                    <span class="visually-hidden"></span>
+                </div>
+            </div>
+        </ng-template>
+            
+        </div>  
+    </div>
+</div>
